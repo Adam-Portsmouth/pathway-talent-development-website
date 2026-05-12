@@ -1,0 +1,27 @@
+:root {
+  --color-deep-navy: #17253a;
+  --color-pathway-blue: #21446a;
+  --color-clarity-light: #ccdfef;
+  --color-bright-ember: #df5926;
+  --color-off-black: #1a1a1a;
+  --color-off-white: #f1f1f1;
+
+  /* Figma exported "Colours/Gradient" as radial without stops; placeholder — refine from Figma. */
+  --gradient-brand: radial-gradient(
+    circle at 10% 10%,
+    var(--color-deep-navy) 0%,
+    var(--color-bright-ember) 190%
+  );
+
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-sans: "Nunito Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display-bold: "Inter", system-ui, sans-serif;
+
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-bold: 700;
+
+  --color-bg: var(--color-off-white);
+  --color-fg: var(--color-off-black);
+}
