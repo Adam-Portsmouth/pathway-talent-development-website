@@ -30,14 +30,6 @@
         justify-content: center;
         padding: 2rem;
       }
-      .hero__logo {
-        position: absolute;
-        top: 1.75rem;
-        left: 1.75rem;
-        width: clamp(2.25rem, 3.5vw, 3rem);
-        height: auto;
-        opacity: 0.95;
-      }
       .hero__content {
         max-width: 65rem;
         text-align: center;
@@ -67,16 +59,23 @@
         html, body {
           overflow: auto;
         }
-        .hero__logo {
-          top: 1.25rem;
-          left: 1.25rem;
-        }
       }
     </style>
   </head>
   <body>
+    <header class="site-nav" data-scrolled="false">
+      <div class="site-nav__inner">
+        <a class="site-nav__home" href="index.html" aria-label="Pathway Talent Development — home">
+          <img class="site-nav__logo site-nav__logo--light" src="Logo Mark Light.webp" alt="" />
+          <img class="site-nav__logo site-nav__logo--dark" src="Logo Mark Dark.webp" alt="" />
+        </a>
+        <nav class="site-nav__links" aria-label="Primary">
+          <a class="site-nav__link" href="blog.html">Blog</a>
+        </nav>
+      </div>
+    </header>
+
     <main class="hero">
-      <img class="hero__logo" src="Logo Mark Light.webp" alt="Pathway Talent Development" />
       <div class="hero__content">
         <p class="hero__eyebrow text-caption">Adam Portsmouth — Founder, Pathway Talent Development</p>
         <h1 class="hero__heading text-heading-1">
@@ -88,5 +87,7 @@
         </p>
       </div>
     </main>
+
+    <script src="scripts/nav.js" defer></script>
   </body>
 </html>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog — Pathway Talent Development</title>
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <meta name="theme-color" content="#17253a" />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header class="site-nav" data-scrolled="false">
+      <div class="site-nav__inner">
+        <a class="site-nav__home" href="index.html" aria-label="Pathway Talent Development — home">
+          <img class="site-nav__logo site-nav__logo--light" src="Logo Mark Light.webp" alt="" />
+          <img class="site-nav__logo site-nav__logo--dark" src="Logo Mark Dark.webp" alt="" />
+        </a>
+        <nav class="site-nav__links" aria-label="Primary">
+          <a class="site-nav__link" href="blog.html" aria-current="page">Blog</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="blog-hero">
+        <div class="blog-hero__inner">
+          <h1 class="blog-hero__title">Blog</h1>
+          <p class="blog-hero__intro text-body">
+            Follow along as I share my journey of finding my way in Learning and Development.
+            Everything written is my own thoughts, opinions, and experiences. I'm not claiming
+            any objective truths here.
+          </p>
+        </div>
+        <div data-nav-sentinel aria-hidden="true"></div>
+      </section>
+
+      <section class="blog-list" aria-label="Blog posts">
+        <!-- Posts ordered newest first. Update the order here when adding new posts. -->
+        <div class="blog-list__grid">
+          <article class="blog-card">
+            <p class="blog-card__date text-small">
+              <time datetime="2026-05-12">12 May 2026</time>
+            </p>
+            <h2 class="blog-card__title text-heading-6">
+              How important is the introduction in an eLearning course?
+            </h2>
+            <p class="blog-card__excerpt text-body">
+              Course introductions shouldn't just list learning objectives — they should
+              motivate learners by answering "why should I care?" A five-point framework
+              for treating adult learners with respect and dramatically improving
+              engagement.
+            </p>
+            <a class="blog-card__cta" href="elearning-introduction.html">Read Full Article…</a>
+          </article>
+
+          <article class="blog-card">
+            <p class="blog-card__date text-small">
+              <time datetime="2026-04-14">14 April 2026</time>
+            </p>
+            <h2 class="blog-card__title text-heading-6">
+              Is short-form video content effective for corporate learning solutions?
+            </h2>
+            <p class="blog-card__excerpt text-body">
+              Short-form video may capture attention, but it falls short as a primary
+              corporate learning delivery method. Where it does shine: marketing learning
+              solutions, creating course hooks, and summarising content between modules.
+            </p>
+            <a class="blog-card__cta" href="short-form-video.html">Read Full Article…</a>
+          </article>
+
+          <article class="blog-card">
+            <p class="blog-card__date text-small">
+              <time datetime="2026-03-17">17 March 2026</time>
+            </p>
+            <h2 class="blog-card__title text-heading-6">
+              What value can you get from learner feedback?
+            </h2>
+            <p class="blog-card__excerpt text-body">
+              How I gather large-scale learner feedback efficiently by embedding Google
+              Forms directly into corporate e-learning courses — low maintenance, no LMS
+              admin, and automation to surface trends that inform future design.
+            </p>
+            <a class="blog-card__cta" href="learner-feedback.html">Read Full Article…</a>
+          </article>
+
+          <article class="blog-card">
+            <p class="blog-card__date text-small">
+              <time datetime="2026-02-19">19 February 2026</time>
+            </p>
+            <h2 class="blog-card__title text-heading-6">
+              How can you integrate AI with learner interaction?
+            </h2>
+            <p class="blog-card__excerpt text-body">
+              This article explores using Custom GPTs to create interactive,
+              context-specific scenarios where learners can practice new skills and
+              receive real-time feedback, all while staying aligned with your course
+              content.
+            </p>
+            <a class="blog-card__cta" href="ai-learner-interaction.html">Read Full Article…</a>
+          </article>
+
+          <article class="blog-card">
+            <p class="blog-card__date text-small">
+              <time datetime="2026-01-22">22 January 2026</time>
+            </p>
+            <h2 class="blog-card__title text-heading-6">
+              How can you ensure behaviour change from an eLearning course?
+            </h2>
+            <p class="blog-card__excerpt text-body">
+              A four-step automated process to ensure behaviour change after training:
+              baseline self-assessment, learner-chosen commitments, timed follow-up, and
+              manager accountability — measuring soft-skills development without the admin
+              burden.
+            </p>
+            <a class="blog-card__cta" href="behaviour-change.html">Read Full Article…</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="scripts/nav.js" defer></script>
+  </body>
+</html>

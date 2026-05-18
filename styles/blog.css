@@ -1,0 +1,124 @@
+.blog-hero {
+  position: relative;
+  background: var(--gradient-brand);
+  color: var(--color-off-white);
+  padding: clamp(8rem, 14vw, 12rem) 1.75rem clamp(4rem, 7vw, 6rem);
+}
+
+.blog-hero__inner {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.blog-hero__title {
+  color: var(--color-off-white);
+  margin: 0 0 1.5rem;
+  font-family: var(--font-display-bold);
+  font-weight: var(--weight-bold);
+  font-size: clamp(4rem, calc(4rem + 6rem * ((100vw - 20rem) / 60rem)), 10rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.blog-hero__intro {
+  max-width: 42rem;
+  color: var(--color-off-white);
+  margin: 0;
+}
+
+.blog-list {
+  background: var(--color-off-white);
+  padding: clamp(3rem, 6vw, 5rem) 1.75rem clamp(4rem, 8vw, 7rem);
+}
+
+.blog-list__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: clamp(2.5rem, 5vw, 4rem);
+  row-gap: clamp(4rem, 8vw, 6rem);
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 60rem) {
+  .blog-list__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 40rem) {
+  .blog-list__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.blog-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 1.25rem;
+  color: var(--color-off-black);
+  border-top: 1px solid rgba(23, 37, 58, 0.18);
+  transition: transform 0.2s ease;
+}
+
+.blog-card::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 4.5rem;
+  height: 3px;
+  background: var(--color-pathway-blue);
+}
+
+.blog-card:hover {
+  transform: translateY(-2px);
+}
+
+.blog-card:hover .blog-card__title {
+  color: var(--color-pathway-blue);
+}
+
+.blog-card__date {
+  color: var(--color-pathway-blue);
+  font-family: var(--font-sans);
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.blog-card__title {
+  color: var(--color-deep-navy);
+  margin: 0;
+  transition: color 0.2s ease;
+}
+
+.blog-card__excerpt {
+  color: var(--color-off-black);
+  margin: 0;
+}
+
+.blog-card__cta {
+  display: inline-block;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  color: var(--color-off-black);
+  font-family: var(--font-sans);
+  font-weight: var(--weight-medium);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.blog-card__cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.blog-card__cta:focus-visible {
+  outline: 2px solid var(--color-bright-ember);
+  outline-offset: 4px;
+}

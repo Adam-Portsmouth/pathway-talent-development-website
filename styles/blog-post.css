@@ -1,0 +1,85 @@
+.post-hero {
+  position: relative;
+  background: var(--gradient-brand);
+  color: var(--color-off-white);
+  padding: clamp(7rem, 11vw, 9rem) 1.75rem clamp(3rem, 5vw, 4.5rem);
+}
+
+.post-hero__inner {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.post-hero__title {
+  color: var(--color-off-white);
+  margin: 0;
+  max-width: 36rem;
+}
+
+.post-body {
+  background: var(--color-off-white);
+  padding: clamp(3rem, 6vw, 5rem) 1.75rem clamp(4rem, 8vw, 7rem);
+}
+
+.post-body__inner {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.post-intro {
+  max-width: 40rem;
+  margin: 0 0 clamp(2rem, 4vw, 3rem);
+  padding: 0.25rem 0 0.25rem 1.5rem;
+  border-left: 3px solid var(--color-bright-ember);
+  color: var(--color-off-black);
+}
+
+.post-body__content {
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  color: var(--color-off-black);
+}
+
+.post-body__content h2 {
+  color: var(--color-deep-navy);
+  margin: 1.5rem 0 0;
+}
+
+.post-body__content h2:first-child {
+  margin-top: 0;
+}
+
+.post-body__content p {
+  margin: 0;
+}
+
+.post-body__content ol,
+.post-body__content ul {
+  margin: 0;
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.post-body__content li {
+  padding-left: 0.25rem;
+}
+
+.post-body__content blockquote {
+  margin: 0;
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  border-left: 3px solid var(--color-pathway-blue);
+  color: var(--color-off-black);
+  font-style: italic;
+}
+
+.post-body__content blockquote p {
+  margin: 0 0 0.75rem;
+}
+
+.post-body__content blockquote p:last-child {
+  margin-bottom: 0;
+}
