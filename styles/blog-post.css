@@ -51,6 +51,11 @@
   margin-top: 0;
 }
 
+.post-body__content h3 {
+  color: var(--color-deep-navy);
+  margin: 0.75rem 0 0;
+}
+
 .post-body__content p {
   margin: 0;
 }

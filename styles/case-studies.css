@@ -1,0 +1,104 @@
+.case-studies-hero {
+  position: relative;
+  background: var(--gradient-brand);
+  color: var(--color-off-white);
+  padding: clamp(8rem, 14vw, 12rem) 1.75rem clamp(4rem, 7vw, 6rem);
+}
+
+.case-studies-hero__inner {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.case-studies-hero__title {
+  color: var(--color-off-white);
+  margin: 0 0 1.5rem;
+  font-family: var(--font-display-bold);
+  font-weight: var(--weight-bold);
+  font-size: clamp(4rem, calc(4rem + 6rem * ((100vw - 20rem) / 60rem)), 10rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.case-studies-hero__intro {
+  max-width: 42rem;
+  color: var(--color-off-white);
+  margin: 0;
+}
+
+.case-studies-list {
+  background: var(--color-off-white);
+  padding: clamp(3rem, 6vw, 5rem) 1.75rem clamp(4rem, 8vw, 7rem);
+}
+
+.case-studies-list__items {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3rem, 6vw, 4.5rem);
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.case-study-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 1.25rem;
+  max-width: 50rem;
+  color: var(--color-off-black);
+  border-top: 1px solid rgba(23, 37, 58, 0.18);
+  transition: transform 0.2s ease;
+}
+
+.case-study-card::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 4.5rem;
+  height: 3px;
+  background: var(--color-pathway-blue);
+}
+
+.case-study-card:hover {
+  transform: translateY(-2px);
+}
+
+.case-study-card:hover .case-study-card__title {
+  color: var(--color-pathway-blue);
+}
+
+.case-study-card__title {
+  color: var(--color-deep-navy);
+  margin: 0;
+  transition: color 0.2s ease;
+}
+
+.case-study-card__excerpt {
+  color: var(--color-off-black);
+  margin: 0;
+}
+
+.case-study-card__cta {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding-top: 0.25rem;
+  color: var(--color-off-black);
+  font-family: var(--font-sans);
+  font-weight: var(--weight-medium);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  align-self: flex-start;
+}
+
+.case-study-card__cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.case-study-card__cta:focus-visible {
+  outline: 2px solid var(--color-bright-ember);
+  outline-offset: 4px;
+}
