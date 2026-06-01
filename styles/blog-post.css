@@ -88,3 +88,47 @@
 .post-body__content blockquote p:last-child {
   margin-bottom: 0;
 }
+
+/* ── Article CTA ───────────────────────────────────────────── */
+
+.post-cta {
+  margin-top: clamp(3rem, 6vw, 4.5rem);
+  padding: clamp(1.75rem, 3.5vw, 2.5rem);
+  background: var(--color-deep-navy);
+  border-radius: 4px;
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.post-cta__text {
+  color: var(--color-clarity-light);
+  margin: 0;
+  opacity: 0.9;
+}
+
+.post-cta__btn {
+  display: inline-block;
+  width: fit-content;
+  background: var(--color-bright-ember);
+  color: var(--color-off-white);
+  font-family: var(--font-sans);
+  font-weight: var(--weight-bold);
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  padding: 0.7em 1.4em;
+  border-radius: 2px;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.post-cta__btn:hover {
+  background: #c44d21;
+  transform: translateY(-1px);
+}
+
+.post-cta__btn:focus-visible {
+  outline: 2px solid var(--color-bright-ember);
+  outline-offset: 4px;
+}
