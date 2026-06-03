@@ -132,3 +132,72 @@
   outline: 2px solid var(--color-bright-ember);
   outline-offset: 4px;
 }
+
+/* ── Footer row (case study + CTA side by side) ────────────── */
+
+.post-footer .post-cta {
+  margin-top: 0;
+}
+
+.post-footer {
+  margin-top: clamp(3rem, 6vw, 4.5rem);
+  padding-top: clamp(2rem, 4vw, 3rem);
+  border-top: 1px solid rgba(23, 37, 58, 0.18);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+@media (max-width: 40rem) {
+  .post-footer {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Case study callout ────────────────────────────────────── */
+
+.post-case-study {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.post-case-study__text {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3.5vw, 2.25rem);
+  line-height: 1.2;
+  color: var(--color-deep-navy);
+  margin: 0;
+}
+
+.post-case-study__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  width: fit-content;
+  background: transparent;
+  color: var(--color-deep-navy);
+  border: 2px solid var(--color-deep-navy);
+  font-family: var(--font-sans);
+  font-weight: var(--weight-bold);
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  padding: 0.7em 1.4em;
+  border-radius: 2px;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.post-case-study__btn:hover {
+  background: var(--color-deep-navy);
+  color: var(--color-off-white);
+  transform: translateY(-1px);
+}
+
+.post-case-study__btn:focus-visible {
+  outline: 2px solid var(--color-bright-ember);
+  outline-offset: 4px;
+}
