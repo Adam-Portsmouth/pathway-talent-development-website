@@ -12,24 +12,19 @@
     <meta name="theme-color" content="#17253a" />
     <link rel="stylesheet" href="styles/main.css" />
     <style>
-      html, body {
-        height: 100%;
-        overflow: hidden;
-      }
-      body {
-        margin: 0;
-        background: var(--gradient-brand);
-        color: var(--color-off-white);
-      }
+      /* ── Hero ──────────────────────────────────────────────── */
       .hero {
         position: relative;
-        min-height: 100vh;
-        min-height: 100dvh;
+        min-height: 80vh;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 2rem;
+        padding: 6rem 2rem 4rem;
+        background: var(--gradient-brand);
+        color: var(--color-off-white);
+        overflow: hidden;
       }
+
       .hero__content {
         max-width: 65rem;
         text-align: center;
@@ -38,26 +33,211 @@
         align-items: center;
         gap: 1.25rem;
       }
+
       .hero__eyebrow {
         color: var(--color-bright-ember);
         margin: 0;
       }
+
       .hero__heading {
         color: var(--color-off-white);
         margin: 0;
       }
+
       .hero__body {
-        max-width: 38rem;
         color: var(--color-off-white);
         margin: 0;
       }
+
       .hero__body strong {
         font-weight: var(--weight-medium);
       }
 
-      @media (max-width: 36rem) {
-        html, body {
-          overflow: auto;
+      .hero__cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5em;
+        margin-top: 0.5rem;
+        background: var(--color-bright-ember);
+        color: var(--color-off-white);
+        font-family: var(--font-sans);
+        font-weight: var(--weight-bold);
+        font-size: 0.95rem;
+        letter-spacing: 0.03em;
+        text-decoration: none;
+        padding: 0.75em 1.6em;
+        border-radius: 2px;
+        transition: background 0.2s ease, transform 0.15s ease;
+      }
+
+      .hero__cta:hover {
+        background: #c44d21;
+        transform: translateY(-1px);
+      }
+
+      .hero__cta:focus-visible {
+        outline: 2px solid var(--color-off-white);
+        outline-offset: 4px;
+      }
+
+
+      /* ── About section ─────────────────────────────────────── */
+      .about {
+        background: var(--color-off-white);
+        padding: clamp(4rem, 8vw, 7rem) 1.75rem clamp(4rem, 8vw, 7rem);
+      }
+
+      .about__inner {
+        max-width: 80rem;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: clamp(2rem, 4vw, 3rem);
+        text-align: center;
+      }
+
+      .about__heading {
+        font-family: var(--font-display);
+        font-size: clamp(1.8rem, 4vw, 2.75rem);
+        line-height: 1.15;
+        color: var(--color-deep-navy);
+        margin: 0;
+        max-width: 45rem;
+      }
+
+      .about__intro {
+        font-family: var(--font-sans);
+        font-size: 1rem;
+        line-height: 1.7;
+        color: var(--color-off-black);
+        margin: 0;
+        max-width: 38rem;
+      }
+
+      .about__bridge {
+        font-family: var(--font-sans);
+        font-size: 1rem;
+        line-height: 1.7;
+        color: var(--color-bright-ember);
+        margin: 0;
+        max-width: 34rem;
+      }
+
+      .about__columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        width: 100%;
+        text-align: left;
+      }
+
+      .about__col {
+        font-family: var(--font-sans);
+        font-size: 1rem;
+        line-height: 1.7;
+        color: var(--color-off-black);
+        padding: 0 clamp(1.5rem, 3vw, 2.5rem);
+      }
+
+      .about__col:first-child {
+        padding-left: 0;
+        border-right: 1px solid rgba(23, 37, 58, 0.18);
+      }
+
+      .about__col:last-child {
+        padding-right: 0;
+      }
+
+      .about__col a {
+        color: var(--color-bright-ember);
+        text-decoration: none;
+      }
+
+      .about__closing {
+        font-family: var(--font-display);
+        font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+        line-height: 1.3;
+        color: var(--color-bright-ember);
+        margin: 0;
+        max-width: 38rem;
+      }
+
+      /* ── Where to start section ────────────────────────────── */
+      .start {
+        background: var(--gradient-brand);
+        color: var(--color-off-white);
+        padding: clamp(4rem, 8vw, 7rem) 1.75rem;
+      }
+
+      .start__inner {
+        max-width: 36rem;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .start__heading {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        line-height: 1.1;
+        color: var(--color-off-white);
+        margin: 0;
+        max-width: 28rem;
+      }
+
+      .start__body {
+        font-family: var(--font-sans);
+        font-size: 1rem;
+        line-height: 1.7;
+        color: var(--color-clarity-light);
+        margin: 0;
+        max-width: 26rem;
+        opacity: 0.85;
+      }
+
+      .start__btn {
+        display: inline-block;
+        width: fit-content;
+        margin-top: 0.5rem;
+        background: var(--color-off-white);
+        color: var(--color-deep-navy);
+        font-family: var(--font-sans);
+        font-weight: var(--weight-bold);
+        font-size: 0.95rem;
+        letter-spacing: 0.03em;
+        text-decoration: none;
+        padding: 0.75em 1.6em;
+        border-radius: 2px;
+        transition: background 0.2s ease, transform 0.15s ease;
+      }
+
+      .start__btn:hover {
+        background: var(--color-clarity-light);
+        transform: translateY(-1px);
+      }
+
+      .start__btn:focus-visible {
+        outline: 2px solid var(--color-off-white);
+        outline-offset: 4px;
+      }
+
+      /* Mobile: stack columns with horizontal rule between */
+      @media (max-width: 40rem) {
+        .about__columns {
+          grid-template-columns: 1fr;
+          gap: clamp(2rem, 4vw, 2.5rem);
+        }
+
+        .about__col {
+          padding: 0;
+        }
+
+        .about__col:first-child {
+          border-right: none;
+          border-bottom: 1px solid rgba(23, 37, 58, 0.18);
+          padding-bottom: clamp(2rem, 4vw, 2.5rem);
         }
       }
     </style>
@@ -76,17 +256,77 @@
       </div>
     </header>
 
-    <main class="hero">
-      <div class="hero__content">
-        <p class="hero__eyebrow text-caption">Adam Portsmouth — Founder, Pathway Talent Development</p>
-        <h1 class="hero__heading text-heading-1">
-          Most organisational learning fails to deliver lasting impact. I make sure yours does.
-        </h1>
-        <p class="hero__body text-body">
-          <strong>I'm an L&amp;D practitioner who helps organisations turn training into real performance.</strong>
-          If your people are going through the motions but nothing is changing, I can help — and I can show you how.
-        </p>
-      </div>
+    <main>
+      <section class="hero">
+        <div class="hero__content">
+          <p class="hero__eyebrow text-caption">Adam Portsmouth — Founder, Pathway Talent Development</p>
+          <h1 class="hero__heading text-heading-1">
+            Most organisational learning doesn't work. I build the kind that does.
+          </h1>
+          <p class="hero__body text-body">
+            <strong>I'm an L&amp;D practitioner who works with organisations to close the gap between training and performance.</strong>
+            If your people are going through the motions but nothing is changing, I can help — and I can show you how.
+          </p>
+          <a
+            class="hero__cta"
+            href="https://www.linkedin.com/in/adam-portsmouth"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Let's Talk <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+
+      <section class="about" aria-label="About Pathway Talent Development">
+        <div class="about__inner">
+          <h2 class="about__heading">
+            Pathway Talent Development exists to make L&amp;D impossible to cut.
+          </h2>
+          <p class="about__intro">
+            A few years ago I had a redundancy risk from an L&amp;D role. It opened my eyes to the
+            insecurity of my position in a company. It made me realise that I couldn't point to a
+            single meaningful business outcome from a year's worth of work. I'd been busy. I'd been
+            productive. But when it came to justifying my place in the business, I had nothing.
+          </p>
+          <p class="about__bridge">
+            That experience changed how I think about the learning &amp; development industry
+            entirely. I later realised I wasn't alone in this.
+          </p>
+          <div class="about__columns">
+            <div class="about__col">
+              <p>
+                Most L&amp;D functions fail not because the work is poor, but because it was never
+                connected to anything that mattered. A problem surfaces, someone assumes it's a
+                people problem, a course gets built, and the business moves on hoping that was the
+                right call. Nobody checks. Nobody measures. And when budgets tighten, L&amp;D is
+                the first thing cut — because it was never clear what it was actually delivering.
+              </p>
+            </div>
+            <div class="about__col">
+              <p>
+                I am building Pathway Talent Development around a different premise. Every piece of
+                work has to connect to a task that connects to an organisational goal. Every success
+                metric is agreed before anything is built. And when training isn't the right answer,
+                I say so before the money is spent. <span style="color: var(--color-bright-ember);">That's not how most L&amp;D consultants operate. It's the only way I'm willing to.</span>
+              </p>
+            </div>
+          </div>
+          <p class="about__closing">
+            I make sure every pound you spend on developing your people actually moves the business
+            forward. And when it won't, I tell you before you spend it.
+          </p>
+        </div>
+      </section>
+      <section class="start">
+        <div class="start__inner">
+          <h2 class="start__heading">Where to start?</h2>
+          <p class="start__body">
+            Read through the linked keystone article to gain a better understanding of my
+            philosophy and business approach. Then follow that onto a real world case study
+            that demonstrates this.
+          </p>
+          <a class="start__btn" href="business-first-ld-philosophy.html">Keystone Article</a>
+        </div>
+      </section>
     </main>
 
     <script src="scripts/nav.js" defer></script>
