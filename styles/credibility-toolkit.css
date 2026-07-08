@@ -21,6 +21,10 @@
   color: var(--color-off-black);
 }
 
+.toolkit-page .site-nav .site-nav__toggle {
+  color: var(--color-off-black);
+}
+
 .toolkit-page .site-nav .site-nav__logo--light { opacity: 0; }
 .toolkit-page .site-nav .site-nav__logo--dark { opacity: 1; }
 
