@@ -40,6 +40,68 @@
   margin: 0 auto;
 }
 
+/* ── Filter bar ─────────────────────────────────────────── */
+
+.blog-filters {
+  max-width: 80rem;
+  margin: 0 auto clamp(2.5rem, 5vw, 4rem);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+}
+
+.blog-filters__label {
+  color: var(--color-off-black);
+  font-family: var(--font-sans);
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-right: 0.25rem;
+}
+
+.blog-filter {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.02em;
+  color: var(--color-deep-navy);
+  background: transparent;
+  border: 1px solid rgba(23, 37, 58, 0.25);
+  padding: 0.4em 0.9em;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.blog-filter:hover {
+  border-color: var(--color-pathway-blue);
+  color: var(--color-pathway-blue);
+}
+
+.blog-filter[aria-pressed="true"] {
+  background: var(--color-deep-navy);
+  border-color: var(--color-deep-navy);
+  color: var(--color-off-white);
+}
+
+.blog-filter:focus-visible {
+  outline: 2px solid var(--color-bright-ember);
+  outline-offset: 3px;
+}
+
+.blog-list__empty {
+  max-width: 80rem;
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
+  color: var(--color-off-black);
+  opacity: 0.75;
+}
+
+.blog-card[hidden] {
+  display: none;
+}
+
 @media (max-width: 60rem) {
   .blog-list__grid {
     grid-template-columns: repeat(2, 1fr);
@@ -99,6 +161,43 @@
 .blog-card__excerpt {
   color: var(--color-off-black);
   margin: 0;
+}
+
+.blog-card__tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.blog-tag {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-bright-ember);
+  background: rgba(223, 89, 38, 0.08);
+  border: 1px solid rgba(223, 89, 38, 0.35);
+  padding: 0.3em 0.7em;
+  border-radius: 2px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.blog-tag:hover {
+  background: var(--color-bright-ember);
+  color: var(--color-off-white);
+}
+
+.blog-tag:focus-visible {
+  outline: 2px solid var(--color-bright-ember);
+  outline-offset: 3px;
 }
 
 .blog-card__cta {
