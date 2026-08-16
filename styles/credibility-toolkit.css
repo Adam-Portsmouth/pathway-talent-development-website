@@ -28,6 +28,31 @@
 .toolkit-page .site-nav .site-nav__logo--light { opacity: 0; }
 .toolkit-page .site-nav .site-nav__logo--dark { opacity: 1; }
 
+/* ── Updates banner (between hero and S2) ─────────────────── */
+
+.toolkit-banner {
+  background: var(--color-deep-navy);
+  color: var(--color-off-white);
+  padding: 0.9rem 1.75rem;
+  text-align: center;
+  border-top: 1px solid rgba(241, 241, 241, 0.08);
+  border-bottom: 1px solid rgba(241, 241, 241, 0.08);
+}
+
+.toolkit-banner__text {
+  margin: 0 auto;
+  max-width: 56rem;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--color-clarity-light);
+}
+
+.toolkit-banner__text strong {
+  color: var(--color-off-white);
+  font-weight: var(--weight-medium);
+}
+
 /* ── Shared layout primitives ─────────────────────────────── */
 
 .toolkit-section {
